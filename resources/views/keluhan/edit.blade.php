@@ -58,6 +58,21 @@
                     <div class="card-header">Edit Keluhan</div>
 
                     <div class="card-body">
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <form action="{{ route('keluhan.update', $keluhan->id_keluhan) }}" method="POST">
                             @csrf
                             @method('PUT')
