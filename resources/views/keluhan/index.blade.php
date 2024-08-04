@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Data Supplier</title>
+    <title>Data Keluhan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -17,7 +17,7 @@
         }
     </style>
 </head>
-<body>
+<body class="bg-secondary">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -55,33 +55,34 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header">Daftar Supplier</div>
+                    <div class="card-header">Daftar Keluhan</div>
 
                     <div class="card-body">
-                        <a href="{{ route('supplier.create') }}" class="btn btn-primary mb-3">Tambah Data</i></a>
-
+                        <a href="{{ route('keluhan.create') }}" class="btn btn-primary mb-3">Tambah Data</a>
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Nama Supplier</th>
-                                        <th scope="col">Alamat</th>
-                                        <th scope="col">No. HP</th>
-                                        <th scope="col">Barang</th>
+                                        <th scope="col">Nama Keluhan</th>
+                                        <th scope="col">Ongkos</th>
+                                        <th scope="col">No Pol</th>
+                                        <th scope="col">Customer</th>
+                                        <th scope="col">Pegawai</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse ($suppliers as $supplier)
+                                    @forelse ($keluhans as $item)
                                         <tr>
                                             <th scope="row">{{ $loop->iteration }}</th>
-                                            <td>{{ $supplier->nama_supplier }}</td>
-                                            <td>{{ $supplier->alamat }}</td>
-                                            <td>{{ $supplier->no_hp }}</td>
-                                            <td>{{ $supplier->barang->nama_barang . ' - ' . $supplier->barang->merek }}</td>
+                                            <td>{{ $item->nama_keluhan }}</td>
+                                            <td>{{ $item->ongkos }}</td>
+                                            <td>{{ $item->no_pol }}</td>
+                                            <td>{{ $item->customer->nama_customer }}</td>
+                                            <td>{{ $item->pegawai->nama_pegawai }}</td>
                                             <td>
-                                                <a href="{{ route('supplier.edit', $supplier->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                                                <form action="{{ route('supplier.destroy', $supplier->id) }}" method="POST" style="display: inline-block">
+                                                <a href="{{ route('keluhan.edit', $item->id_keluhan) }}" class="btn btn-sm btn-warning">Edit</a>
+                                                <form action="{{ route('keluhan.destroy', $item->id_keluhan) }}" method="POST" style="display: inline-block">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this item?')">Delete</button>
@@ -103,6 +104,3 @@
 
 </body>
 </html>
-
-
-

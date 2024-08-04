@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edit Data Barang</title>
+    <title>Tambah Kendaraan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -25,7 +25,7 @@
             <a class="navbar-brand" href="/">
                 Bengkel
             </a>
-           
+            
             <div class="navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -55,35 +55,58 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Edit Barang</div>
+                    <div class="card-header">Tambah Kendaraan</div>
 
                     <div class="card-body">
-                        <form action="{{ route('barang.update', $barang->id) }}" method="POST">
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <form action="{{ route('kendaraan.store') }}" method="POST">
                             @csrf
-                            @method('PUT')
                             <div class="form-group mb-3">
-                                <label for="nama_barang">Nama Barang:</label>
-                                <input type="text" name="nama_barang" id="nama_barang" class="form-control" value="{{ $barang->nama_barang }}" required>
+                                <label for="no_pol">No. Polisi:</label>
+                                <input type="text" name="no_pol" id="no_pol" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="no_mesin">No. Mesin:</label>
+                                <input type="text" name="no_mesin" id="no_mesin" class="form-control" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="merek">Merek:</label>
-                                <input type="text" name="merek" id="merek" class="form-control" value="{{ $barang->merek }}" required>
+                                <select name="merek" id="merek" class="form-select" required>
+                                    <option value="Honda">Honda</option>
+                                    <option value="Yamaha">Yamaha</option>
+                                    <option value="Suzuki">Suzuki</option>
+                                    <option value="Kawasaki">Kawasaki</option>
+                                    <option value="Lain">Lain</option>
+                                </select>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="harga">Harga:</label>
-                                <input type="number" name="harga" id="harga" class="form-control" value="{{ $barang->harga }}" required>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="stok">Stok:</label>
-                                <input type="number" name="stok" id="stok" class="form-control" value="{{ $barang->stok }}" required>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="satuan">Satuan:</label>
-                                <input type="text" name="satuan" id="satuan" class="form-control" value="{{ $barang->satuan }}" required>
+                                <label for="warna">Warna:</label>
+                                <select name="warna" id="warna" class="form-select" required>
+                                    <option value="Putih">Putih</option>
+                                    <option value="Hitam">Hitam</option>
+                                    <option value="Hijau">Hijau</option>
+                                    <option value="Biru">Biru</option>
+                                    <option value="Merah">Merah</option>
+                                    <option value="Lain">Lain</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary">Simpan</button>
-                                <a href="{{ route('barang.index') }}" class="btn btn-secondary">Batal</a>
+                                <a href="{{ route('kendaraan.index') }}" class="btn btn-secondary">Batal</a>
                             </div>
                         </form>
                     </div>
@@ -94,6 +117,3 @@
 
 </body>
 </html>
-
-
-

@@ -25,16 +25,26 @@
             <a class="navbar-brand" href="/">
                 Bengkel
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            
+            <div class="navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('barang.index') }}">Barang</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('supplier.index') }}">Supplier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('kendaraan.index') }}">Kendaraan</a>
+                    </li>
+		            <li class="nav-item">
+                        <a class="nav-link" href="{{ route('customers.index') }}">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('pegawai.index') }}">Pegawai</a>
+                    </li>
+		            <li class="nav-item">
+                        <a class="nav-link" href="{{ route('keluhan.index') }}">Keluhan</a>
                     </li>
                 </ul>
             </div>

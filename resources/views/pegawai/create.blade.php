@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edit Data Barang</title>
+    <title>Tambah Pegawai</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -55,35 +55,44 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Edit Barang</div>
+                    <div class="card-header">Tambah Pegawai</div>
 
                     <div class="card-body">
-                        <form action="{{ route('barang.update', $barang->id) }}" method="POST">
+                        <form action="{{ route('pegawai.store') }}" method="POST">
                             @csrf
-                            @method('PUT')
                             <div class="form-group mb-3">
-                                <label for="nama_barang">Nama Barang:</label>
-                                <input type="text" name="nama_barang" id="nama_barang" class="form-control" value="{{ $barang->nama_barang }}" required>
+                                <label for="nama_pegawai">Nama Pegawai:</label>
+                                <input type="text" name="nama_pegawai" id="nama_pegawai" class="form-control" value="{{ old('nama_pegawai') }}" required>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="merek">Merek:</label>
-                                <input type="text" name="merek" id="merek" class="form-control" value="{{ $barang->merek }}" required>
+                                <label for="alamat">Alamat:</label>
+                                <input type="text" name="alamat" id="alamat" class="form-control" value="{{ old('alamat') }}" required>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="harga">Harga:</label>
-                                <input type="number" name="harga" id="harga" class="form-control" value="{{ $barang->harga }}" required>
+                                <label for="jenis_kelamin">Jenis Kelamin:</label>
+                                <select name="jenis_kelamin" id="jenis_kelamin" class="form-control" required>
+                                    <option value="L" {{ old('jenis_kelamin') == 'L' ? 'selected' : '' }}>Laki-laki</option>
+                                    <option value="P" {{ old('jenis_kelamin') == 'P' ? 'selected' : '' }}>Perempuan</option>
+                                </select>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="stok">Stok:</label>
-                                <input type="number" name="stok" id="stok" class="form-control" value="{{ $barang->stok }}" required>
+                                <label for="jabatan">Jabatan:</label>
+                                <select name="jabatan" id="jabatan" class="form-control" required>
+                                    <option value="teknisi" {{ old('jabatan') == 'teknisi' ? 'selected' : '' }}>Teknisi</option>
+                                    <option value="admin" {{ old('jabatan') == 'admin' ? 'selected' : '' }}>Admin</option>
+                                    <option value="spv" {{ old('jabatan') == 'spv' ? 'selected' : '' }}>Supervisor</option>
+                                </select>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="satuan">Satuan:</label>
-                                <input type="text" name="satuan" id="satuan" class="form-control" value="{{ $barang->satuan }}" required>
+                                <label for="status">Status:</label>
+                                <select name="status" id="status" class="form-control" required>
+                                    <option value="aktif" {{ old('status') == 'aktif' ? 'selected' : '' }}>Aktif</option>
+                                    <option value="tidak_aktif" {{ old('status') == 'tidak_aktif' ? 'selected' : '' }}>Tidak Aktif</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary">Simpan</button>
-                                <a href="{{ route('barang.index') }}" class="btn btn-secondary">Batal</a>
+                                <a href="{{ route('pegawai.index') }}" class="btn btn-secondary">Batal</a>
                             </div>
                         </form>
                     </div>
@@ -94,6 +103,3 @@
 
 </body>
 </html>
-
-
-
