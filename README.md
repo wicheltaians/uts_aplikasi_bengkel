@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+![uas1](https://github.com/user-attachments/assets/ce4f0290-ce1e-465c-bb3f-368640632710)<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -9,15 +9,14 @@
 
 ## Preview
 
-![FireShot Capture 009 - Bengkel - 127 0 0 1](https://github.com/wicheltaians/uts_aplikasi_bengkel/assets/68503321/f6bf9299-b9eb-4f4f-bec0-55d425eab505)
-
-![FireShot Capture 010 - Data Barang - 127 0 0 1](https://github.com/wicheltaians/uts_aplikasi_bengkel/assets/68503321/7f78267f-8923-43e3-8009-f7d8a895d215)
-
-![FireShot Capture 011 - Tambah Data Supplier - 127 0 0 1](https://github.com/wicheltaians/uts_aplikasi_bengkel/assets/68503321/fa13e790-05e1-4372-b508-effa556b8fce)
-
-![FireShot Capture 013 - Data Supplier - 127 0 0 1](https://github.com/wicheltaians/uts_aplikasi_bengkel/assets/68503321/d6d232a8-9586-43c1-9e10-acaa69416390)
-
-![FireShot Capture 015 - Edit Data Supplier - 127 0 0 1](https://github.com/wicheltaians/uts_aplikasi_bengkel/assets/68503321/42d4b7f6-4780-46af-a05b-132d7bc20825)
+![uas1](https://github.com/user-attachments/assets/75b65670-c88d-4253-af7f-a6afeb87e952)
+![uas2](https://github.com/user-attachments/assets/b22edbea-bbeb-47b7-8279-ae372e38dc8e)
+![uas3](https://github.com/user-attachments/assets/5fb7aa96-cab8-4958-a67d-664c5bf634d4)
+![uas4](https://github.com/user-attachments/assets/50523029-3a67-41ba-bb64-6baccd163d2f)
+![uas5](https://github.com/user-attachments/assets/a549543a-ad39-497b-b077-5c50a74db6ab)
+![uas6](https://github.com/user-attachments/assets/f6dadc18-438b-4268-bfc6-54aa6b48ccb4)
+![uas7](https://github.com/user-attachments/assets/7ec5e2d5-3cec-4f88-ac64-50640ae29f5c)
+![uas8](https://github.com/user-attachments/assets/bfae9881-28dd-4cc4-8e95-0c87d6b5b802)
 
 ## About Laravel
 
