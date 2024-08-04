@@ -7,6 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Preview
+
+![FireShot Capture 009 - Bengkel - 127 0 0 1](https://github.com/wicheltaians/uts_aplikasi_bengkel/assets/68503321/f6bf9299-b9eb-4f4f-bec0-55d425eab505)
+
+![FireShot Capture 010 - Data Barang - 127 0 0 1](https://github.com/wicheltaians/uts_aplikasi_bengkel/assets/68503321/7f78267f-8923-43e3-8009-f7d8a895d215)
+
+![FireShot Capture 011 - Tambah Data Supplier - 127 0 0 1](https://github.com/wicheltaians/uts_aplikasi_bengkel/assets/68503321/fa13e790-05e1-4372-b508-effa556b8fce)
+
+![FireShot Capture 013 - Data Supplier - 127 0 0 1](https://github.com/wicheltaians/uts_aplikasi_bengkel/assets/68503321/d6d232a8-9586-43c1-9e10-acaa69416390)
+
+![FireShot Capture 015 - Edit Data Supplier - 127 0 0 1](https://github.com/wicheltaians/uts_aplikasi_bengkel/assets/68503321/42d4b7f6-4780-46af-a05b-132d7bc20825)
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
